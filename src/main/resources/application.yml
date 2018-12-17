@@ -1,0 +1,20 @@
+server:
+  servlet:
+    context-path: /
+  port: 9000
+type: Framework
+name: Spring-Boot ${type}
+my:
+  messageValue: ${random.int(10,1500)} - This is prod profile
+  # random.int(10,1500) 9 to 1499 inclusive if we need 10 and 1500 random.int*10,1500*
+find:
+  randomObj: ${random.uuid}
+spring:
+  profiles:
+    active: Prod
+ 
+# Define program argument as --spring.profiles.active=Prod in this commandline has preference 
+test:
+   name-print: Hello this is from test.name_print 
+   name:
+     test: Hello this is from test.name.test 
