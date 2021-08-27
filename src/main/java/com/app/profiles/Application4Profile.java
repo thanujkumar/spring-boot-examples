@@ -18,13 +18,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Application4Profile {
 
-
+	   //Loads based on profile MyMessage object configured in AppConfig
+	   //Also based on profile application-Dev.properties is loaded
+       static {
+    	   System.setProperty("spring.profiles.active", "Prod");
+       }
+	
 		@Autowired
 		private MyMessage myMessage;
 
 
 		@RequestMapping("/")
-		public String welcome() {
+		public String welcomeProfileMsg() {
 			return "Welcome your lucky number is : " + myMessage.getMessageValue();
 		}
 

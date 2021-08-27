@@ -20,12 +20,12 @@ public class ApplicationConditionalProfile {
 
 
 		@Autowired
-		private MyConditionalMessage myMessage;
+		private MyConditionalMessage myConditionalMessage;
 
 
-		@RequestMapping("/")
-		public String welcome() {
-			return "Welcome your lucky number is : " + myMessage.getMessageValue();
+		@RequestMapping("/cp")
+		public String welcomeConditionalProfile() {
+			return "Welcome your lucky number is : " + myConditionalMessage.getMessageValue();
 		}
 
 		public static void main(String[] args) {

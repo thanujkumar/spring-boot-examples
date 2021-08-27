@@ -1,6 +1,4 @@
-package com.app;
-
-import static org.junit.Assert.assertTrue;
+package com.app2;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +6,8 @@ import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWeb
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 @AutoConfigureWebTestClient
@@ -21,7 +21,7 @@ public class ApplicationTest4 {
 	@Test
 	public void testMe() throws Exception {
 		System.out.println(template.getForEntity("/", String.class).getBody());
-		assertTrue(template.getForEntity("/", String.class).getBody().contentEquals("Hello.."));
+		assertTrue(template.getForEntity("/", String.class).getBody().contentEquals("App1-Hello SpringBoot-Spring Boot Framework"));
 	}
 	
 }

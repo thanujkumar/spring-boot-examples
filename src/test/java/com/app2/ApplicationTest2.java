@@ -1,5 +1,6 @@
-package com.app;
+package com.app2;
 
+import com.app2.Application;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -11,7 +12,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 //@RunWith(SpringRunner.class) - Junit 4
-@SpringBootApplication(scanBasePackageClasses=Application.class)
+@SpringBootApplication(scanBasePackageClasses= Application.class)
 public class ApplicationTest2 {
 
 	private static MockMvc mvc;
@@ -25,6 +26,6 @@ public class ApplicationTest2 {
 	public void testMe() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_PLAIN))
 		   .andExpect(MockMvcResultMatchers.status().isOk())
-		   .andExpect(MockMvcResultMatchers.content().string(Matchers.equalTo("Hello..")));
+		   .andExpect(MockMvcResultMatchers.content().string(Matchers.containsString("App1")));
 	}
 }

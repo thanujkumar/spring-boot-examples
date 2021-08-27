@@ -1,5 +1,6 @@
 package com.app.profiles;
 
+//Configured in different way for prod and dev in AppConfig
 public class MyMessage {
 	
 	private String messageValue;

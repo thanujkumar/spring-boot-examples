@@ -1,4 +1,4 @@
-package com.app;
+package com.app2;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

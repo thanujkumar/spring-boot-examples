@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class AppConditionalConfig {
 
 	@Bean
-	public MyConditionalMessage myMessage(@Value("${my.messageValue}") String messageValue) {
+	public MyConditionalMessage myConditionalMessage(@Value("${my.messageValue}") String messageValue) {
 		MyConditionalMessage myMessage = new MyConditionalMessage();
 		myMessage.setMessageValue(messageValue);
 		return myMessage;

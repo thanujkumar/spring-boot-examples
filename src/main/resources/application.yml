@@ -1,11 +1,11 @@
 server:
   servlet:
-    context-path: /
+    context-path: /tk
   port: 9000
 type: Framework
 name: Spring-Boot ${type}
 my:
-  messageValue: ${random.int(10,1500)} - This is prod profile
+  messageValue: ${random.int(10,1500)} # This is prod profile
   # random.int(10,1500) 9 to 1499 inclusive if we need 10 and 1500 random.int*10,1500*
 find:
   randomObj: ${random.uuid}

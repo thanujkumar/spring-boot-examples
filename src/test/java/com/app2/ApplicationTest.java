@@ -1,5 +1,6 @@
-package com.app;
+package com.app2;
 
+import com.app2.Application;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class ApplicationTest {
 	public void testMe() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_PLAIN))
 		   .andExpect(MockMvcResultMatchers.status().isOk())
-		   .andExpect(MockMvcResultMatchers.content().string(Matchers.equalTo("Hello..")));
+		   .andExpect(MockMvcResultMatchers.content().string(Matchers.containsString("Hello")));
 	}
 	
 }
