@@ -17,4 +17,7 @@ spring:
 test:
    name-print: Hello this is from test.name_print 
    name:
-     test: Hello this is from test.name.test 
+     test: Hello this is from test.name.test
+
+tk:
+  projectName: ThanujProject

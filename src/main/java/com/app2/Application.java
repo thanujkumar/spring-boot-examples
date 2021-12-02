@@ -22,7 +22,7 @@ public class Application {
 	
 	@RequestMapping("/")
 	public String home() {
-		System.out.println(Thread.currentThread());
+		System.out.println(Thread.currentThread() + " " + "App1-"+message +"-"+name);
 		return "App1-"+message +"-"+name;
 	}
 	

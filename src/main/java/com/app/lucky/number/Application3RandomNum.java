@@ -13,6 +13,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+//As keys are present in both application.yml and application.properties with different data types you will get error
+//This is to show that first application.yml is loaded and last application.properties
+
 @SpringBootApplication
 @RestController
 public class Application3RandomNum {
@@ -32,6 +36,9 @@ public class Application3RandomNum {
 		app.setLogStartupInfo(false);
 		ConfigurableApplicationContext context = app.run(args);
         System.out.println(context);
+		MyMessage myMessage = context.getBean(MyMessage.class);
+		System.out.println("======================" + myMessage.getMessageValue());
+		System.out.println("======================" + myMessage.getRandom());
 	}
 
 	@Bean
