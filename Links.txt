@@ -1,0 +1,3 @@
+https://spring.io/blog/2021/09/02/a-java-17-and-jakarta-ee-9-baseline-for-spring-framework-6
+
+https://piotrminkowski.com/2020/02/18/spring-boot-admin-on-kubernetes/

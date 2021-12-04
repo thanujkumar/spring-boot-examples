@@ -5,6 +5,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
+// Label beans as belonging to different environments (like dev, prod etc)
+// In case of spring boot, we can also use application.profile.properties file
 @Configuration
 public class AppConfig {
 

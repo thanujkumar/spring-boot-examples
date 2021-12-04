@@ -12,7 +12,30 @@ find:
 spring:
   profiles:
     active: Prod
- 
+  datasource:
+    continue-on-error: true
+#https://www.baeldung.com/spring-boot-actuator-enable-endpoints
+#https://www.baeldung.com/spring-boot-actuators
+
+#heath metrics using actuators
+#Default built-in end points -https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-endpoints
+#include: info,health,metrics,loggers,beans,mappings,configprops,conditions,env  OR '*'
+#Below though all are enabled, we disabled only loggers
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    loggers:
+      enabled: false
+
 # Define program argument as --spring.profiles.active=Prod in this commandline has preference 
 test:
    name-print: Hello this is from test.name_print 

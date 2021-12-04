@@ -10,6 +10,6 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "tk")
 public class MapYamlProps {
 
-    private String projectName;
+    private String projectName; //this property set in yaml file
 
 }
