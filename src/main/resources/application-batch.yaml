@@ -1,0 +1,21 @@
+spring:
+  batch:
+    job:
+      enabled: false # manually run the job
+    jdbc:
+      initialize-schema: always
+      table-prefix: TK_BATCH_
+  jpa:
+    show-sql: true
+    database: h2
+
+# shell login as part of actuator (was removed in 2.x and third party one exists - https://github.com/anand1st/sshd-shell-spring-boot )
+# using jolokia http://localhost:9000/test/actuator/jolokia
+# http://localhost:9000/test/actuator/jolokia/read/java.lang:type=Memory
+# http://localhost:9000/test/actuator/jolokia/read/java.lang:type=Memory/HeapMemoryUsage
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*,jolokia"
+
